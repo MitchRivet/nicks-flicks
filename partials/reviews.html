@@ -1,20 +1,19 @@
 <div class="row">
     <div class="col-md-2" id="reviewList">
-    <h1>Stuff</h1>
     <ul>
         <li ng-repeat="item in reviews">
-          <a ui-sref="reviews.content({reviewId: reviewId})">{{ item.title }}</a>
+          <a ui-sref="reviews.review({ reviewId: item.reviewId })">{{ item.reviewTitle }}</a>
 
          </li>
          </ul>
 
     </div>
-
+<div ui-view="body"></div>
 
 
     <div class="col-md-10" id="reviewForm">
 
-    <div ui-view></div>
+
 
       <h1>Add a New Movie Review!</h1>
       <form ng-submit="ReviewsFactory.addReview()" role="form">

@@ -13,10 +13,10 @@ nicksFlicks.config(function($stateProvider, $urlRouterProvider) {
     controller: "ReviewsCtrl"
   });
 
-  $stateProvider.state('reviews.content', {
+  $stateProvider.state("reviews.review", {
     url: "/:reviewId",
-    templateUrl: "partials/reviews.content.html",
-    controller: "ReviewsCtrl"
-  });
+    templateUrl: "partials/reviews_content.html",
+    controller: "ReviewContentCtrl"
 
+  });
 });
